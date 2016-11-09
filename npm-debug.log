@@ -1,0 +1,445 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'bower',
+1 verbose cli   'electron',
+1 verbose cli   'nedb',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.37
+4 verbose node symlink /usr/bin/node
+5 warn package.json dzgerald@1.0.0 No description
+6 warn package.json dzgerald@1.0.0 No repository field.
+7 warn package.json dzgerald@1.0.0 No README data
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'bower', null ]
+10 verbose cache add name=undefined spec="bower" args=["bower",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'bower',
+11 verbose parsed url   path: 'bower',
+11 verbose parsed url   href: 'bower' }
+12 verbose cache add [ 'electron', null ]
+13 verbose cache add name=undefined spec="electron" args=["electron",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'electron',
+14 verbose parsed url   path: 'electron',
+14 verbose parsed url   href: 'electron' }
+15 verbose cache add [ 'nedb', null ]
+16 verbose cache add name=undefined spec="nedb" args=["nedb",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'nedb',
+17 verbose parsed url   path: 'nedb',
+17 verbose parsed url   href: 'nedb' }
+18 silly lockFile 206e3ce5-bower bower
+19 verbose lock bower /home/aovchinnikov/.npm/206e3ce5-bower.lock
+20 silly lockFile da005969-electron electron
+21 verbose lock electron /home/aovchinnikov/.npm/da005969-electron.lock
+22 silly lockFile a1971d45-nedb nedb
+23 verbose lock nedb /home/aovchinnikov/.npm/a1971d45-nedb.lock
+24 silly lockFile 206e3ce5-bower bower
+25 silly lockFile 206e3ce5-bower bower
+26 silly lockFile da005969-electron electron
+27 silly lockFile da005969-electron electron
+28 verbose addNamed [ 'bower', '' ]
+29 verbose addNamed [ null, '*' ]
+30 silly lockFile 1240aab1-bower bower@
+31 verbose lock bower@ /home/aovchinnikov/.npm/1240aab1-bower.lock
+32 verbose addNamed [ 'electron', '' ]
+33 verbose addNamed [ null, '*' ]
+34 silly lockFile 89f56ea2-electron electron@
+35 verbose lock electron@ /home/aovchinnikov/.npm/89f56ea2-electron.lock
+36 silly lockFile a1971d45-nedb nedb
+37 silly lockFile a1971d45-nedb nedb
+38 verbose addNamed [ 'nedb', '' ]
+39 verbose addNamed [ null, '*' ]
+40 silly lockFile c21a1013-nedb nedb@
+41 verbose lock nedb@ /home/aovchinnikov/.npm/c21a1013-nedb.lock
+42 silly addNameRange { name: 'bower', range: '*', hasData: false }
+43 silly addNameRange { name: 'electron', range: '*', hasData: false }
+44 silly addNameRange { name: 'nedb', range: '*', hasData: false }
+45 verbose request where is /bower
+46 verbose request registry https://registry.npmjs.org/
+47 verbose request id efd6be91af338906
+48 verbose url raw /bower
+49 verbose url resolving [ 'https://registry.npmjs.org/', './bower' ]
+50 verbose url resolved https://registry.npmjs.org/bower
+51 verbose request where is https://registry.npmjs.org/bower
+52 info trying registry request attempt 1 at 20:40:39
+53 verbose etag "3Y60AM1P6W3L3WCX3KAJYUHDE"
+54 http GET https://registry.npmjs.org/bower
+55 verbose request where is /nedb
+56 verbose request registry https://registry.npmjs.org/
+57 verbose url raw /nedb
+58 verbose url resolving [ 'https://registry.npmjs.org/', './nedb' ]
+59 verbose url resolved https://registry.npmjs.org/nedb
+60 verbose request where is https://registry.npmjs.org/nedb
+61 info trying registry request attempt 1 at 20:40:39
+62 http GET https://registry.npmjs.org/nedb
+63 verbose request where is /electron
+64 verbose request registry https://registry.npmjs.org/
+65 verbose url raw /electron
+66 verbose url resolving [ 'https://registry.npmjs.org/', './electron' ]
+67 verbose url resolved https://registry.npmjs.org/electron
+68 verbose request where is https://registry.npmjs.org/electron
+69 info trying registry request attempt 1 at 20:40:39
+70 verbose etag "53IJJ2YTPAKHVWSYM74Y2T4VQ"
+71 http GET https://registry.npmjs.org/electron
+72 http 200 https://registry.npmjs.org/bower
+73 silly registry.get cb [ 200,
+73 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+73 silly registry.get     etag: '"4UOMG3VVMAB5GCJMBFL2AIPKZ"',
+73 silly registry.get     'content-type': 'application/json',
+73 silly registry.get     'content-encoding': 'gzip',
+73 silly registry.get     'cache-control': 'max-age=300',
+73 silly registry.get     'content-length': '21015',
+73 silly registry.get     'accept-ranges': 'bytes',
+73 silly registry.get     date: 'Wed, 09 Nov 2016 17:39:53 GMT',
+73 silly registry.get     via: '1.1 varnish',
+73 silly registry.get     age: '192',
+73 silly registry.get     connection: 'keep-alive',
+73 silly registry.get     'x-served-by': 'cache-bma7028-BMA',
+73 silly registry.get     'x-cache': 'HIT',
+73 silly registry.get     'x-cache-hits': '7',
+73 silly registry.get     'x-timer': 'S1478713193.973266,VS0,VE0',
+73 silly registry.get     vary: 'Accept-Encoding' } ]
+74 silly addNameRange number 2 { name: 'bower', range: '*', hasData: true }
+75 silly addNameRange versions [ 'bower',
+75 silly addNameRange   [ '0.1.0',
+75 silly addNameRange     '0.1.2',
+75 silly addNameRange     '0.1.3',
+75 silly addNameRange     '0.2.0',
+75 silly addNameRange     '0.3.0',
+75 silly addNameRange     '0.3.1',
+75 silly addNameRange     '0.3.2',
+75 silly addNameRange     '0.4.0',
+75 silly addNameRange     '0.5.0',
+75 silly addNameRange     '0.5.1',
+75 silly addNameRange     '0.6.0',
+75 silly addNameRange     '0.6.1',
+75 silly addNameRange     '0.6.2',
+75 silly addNameRange     '0.6.3',
+75 silly addNameRange     '0.6.4',
+75 silly addNameRange     '0.6.5',
+75 silly addNameRange     '0.6.6',
+75 silly addNameRange     '0.6.7',
+75 silly addNameRange     '0.6.8',
+75 silly addNameRange     '0.7.0',
+75 silly addNameRange     '0.7.1',
+75 silly addNameRange     '0.8.0',
+75 silly addNameRange     '0.8.1',
+75 silly addNameRange     '0.8.2',
+75 silly addNameRange     '0.8.3',
+75 silly addNameRange     '0.8.4',
+75 silly addNameRange     '0.8.5',
+75 silly addNameRange     '0.8.6',
+75 silly addNameRange     '0.9.0',
+75 silly addNameRange     '0.9.1',
+75 silly addNameRange     '0.9.2',
+75 silly addNameRange     '0.10.0',
+75 silly addNameRange     '1.0.0',
+75 silly addNameRange     '1.0.1',
+75 silly addNameRange     '1.0.2',
+75 silly addNameRange     '1.0.3',
+75 silly addNameRange     '1.1.0',
+75 silly addNameRange     '1.1.1',
+75 silly addNameRange     '1.1.2',
+75 silly addNameRange     '1.2.0',
+75 silly addNameRange     '1.2.1',
+75 silly addNameRange     '1.2.2',
+75 silly addNameRange     '1.2.3',
+75 silly addNameRange     '1.2.4',
+75 silly addNameRange     '1.2.5',
+75 silly addNameRange     '1.2.6',
+75 silly addNameRange     '1.2.7',
+75 silly addNameRange     '1.2.8',
+75 silly addNameRange     '1.3.0',
+75 silly addNameRange     '1.3.1',
+75 silly addNameRange     '1.3.2',
+75 silly addNameRange     '1.3.3',
+75 silly addNameRange     '1.3.4',
+75 silly addNameRange     '1.3.5',
+75 silly addNameRange     '1.3.6',
+75 silly addNameRange     '1.3.7',
+75 silly addNameRange     '1.3.8',
+75 silly addNameRange     '1.3.9',
+75 silly addNameRange     '1.3.10',
+75 silly addNameRange     '1.3.11',
+75 silly addNameRange     '1.3.12',
+75 silly addNameRange     '1.4.0',
+75 silly addNameRange     '1.4.1',
+75 silly addNameRange     '1.5.0',
+75 silly addNameRange     '1.5.1',
+75 silly addNameRange     '1.5.2',
+75 silly addNameRange     '1.5.3',
+75 silly addNameRange     '1.6.2',
+75 silly addNameRange     '1.6.3',
+75 silly addNameRange     '1.6.4',
+75 silly addNameRange     '1.6.5',
+75 silly addNameRange     '1.5.4',
+75 silly addNameRange     '1.4.2',
+75 silly addNameRange     '1.6.6',
+75 silly addNameRange     '1.6.7',
+75 silly addNameRange     '1.6.8',
+75 silly addNameRange     '1.6.9',
+75 silly addNameRange     '1.7.0',
+75 silly addNameRange     '1.7.1',
+75 silly addNameRange     '1.7.2',
+75 silly addNameRange     '1.7.5',
+75 silly addNameRange     '1.7.6',
+75 silly addNameRange     '1.7.7',
+75 silly addNameRange     '1.7.8',
+75 silly addNameRange     '1.7.9',
+75 silly addNameRange     '1.8.0' ] ]
+76 verbose addNamed [ 'bower', '1.8.0' ]
+77 verbose addNamed [ '1.8.0', '1.8.0' ]
+78 silly lockFile 8d20daf9-bower-1-8-0 bower@1.8.0
+79 verbose lock bower@1.8.0 /home/aovchinnikov/.npm/8d20daf9-bower-1-8-0.lock
+80 silly lockFile abe5beab--npmjs-org-bower-bower-1-8-0-tgz https://registry.npmjs.org/bower/-/bower-1.8.0.tgz
+81 verbose lock https://registry.npmjs.org/bower/-/bower-1.8.0.tgz /home/aovchinnikov/.npm/abe5beab--npmjs-org-bower-bower-1-8-0-tgz.lock
+82 verbose addRemoteTarball [ 'https://registry.npmjs.org/bower/-/bower-1.8.0.tgz',
+82 verbose addRemoteTarball   '55dbebef0ad9155382d9e9d3e497c1372345b44a' ]
+83 info retry fetch attempt 1 at 20:40:39
+84 verbose fetch to= /tmp/npm-25165-Ee-vSl6D/registry.npmjs.org/bower/-/bower-1.8.0.tgz
+85 http GET https://registry.npmjs.org/bower/-/bower-1.8.0.tgz
+86 http 200 https://registry.npmjs.org/electron
+87 silly registry.get cb [ 200,
+87 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+87 silly registry.get     etag: '"D39HCKJRMUY3713NBNB0ZXL1R"',
+87 silly registry.get     'content-type': 'application/json',
+87 silly registry.get     'content-encoding': 'gzip',
+87 silly registry.get     'cache-control': 'max-age=300',
+87 silly registry.get     'content-length': '6482',
+87 silly registry.get     'accept-ranges': 'bytes',
+87 silly registry.get     date: 'Wed, 09 Nov 2016 17:39:54 GMT',
+87 silly registry.get     via: '1.1 varnish',
+87 silly registry.get     age: '0',
+87 silly registry.get     connection: 'keep-alive',
+87 silly registry.get     'x-served-by': 'cache-bma7025-BMA',
+87 silly registry.get     'x-cache': 'HIT',
+87 silly registry.get     'x-cache-hits': '1',
+87 silly registry.get     'x-timer': 'S1478713193.991397,VS0,VE189',
+87 silly registry.get     vary: 'Accept-Encoding' } ]
+88 http 200 https://registry.npmjs.org/bower/-/bower-1.8.0.tgz
+89 silly addNameRange number 2 { name: 'electron', range: '*', hasData: true }
+90 silly addNameRange versions [ 'electron',
+90 silly addNameRange   [ '0.1.0',
+90 silly addNameRange     '0.1.1',
+90 silly addNameRange     '0.1.2',
+90 silly addNameRange     '0.2.0',
+90 silly addNameRange     '0.2.1',
+90 silly addNameRange     '0.3.0',
+90 silly addNameRange     '0.4.0',
+90 silly addNameRange     '0.4.1',
+90 silly addNameRange     '1.3.1',
+90 silly addNameRange     '1.3.2',
+90 silly addNameRange     '1.3.3',
+90 silly addNameRange     '1.3.4',
+90 silly addNameRange     '1.3.5',
+90 silly addNameRange     '1.3.6',
+90 silly addNameRange     '1.4.0',
+90 silly addNameRange     '1.4.1',
+90 silly addNameRange     '1.3.7',
+90 silly addNameRange     '1.4.2',
+90 silly addNameRange     '1.4.3',
+90 silly addNameRange     '1.4.4',
+90 silly addNameRange     '1.3.8',
+90 silly addNameRange     '1.4.5' ] ]
+91 verbose addNamed [ 'electron', '1.4.5' ]
+92 verbose addNamed [ '1.4.5', '1.4.5' ]
+93 silly lockFile 1db62c69-electron-1-4-5 electron@1.4.5
+94 verbose lock electron@1.4.5 /home/aovchinnikov/.npm/1db62c69-electron-1-4-5.lock
+95 silly lockFile e8e0c975--org-electron-electron-1-4-5-tgz https://registry.npmjs.org/electron/-/electron-1.4.5.tgz
+96 verbose lock https://registry.npmjs.org/electron/-/electron-1.4.5.tgz /home/aovchinnikov/.npm/e8e0c975--org-electron-electron-1-4-5-tgz.lock
+97 verbose addRemoteTarball [ 'https://registry.npmjs.org/electron/-/electron-1.4.5.tgz',
+97 verbose addRemoteTarball   '829c4884d641d88398805a7f94a37ec432a00bf3' ]
+98 info retry fetch attempt 1 at 20:40:39
+99 verbose fetch to= /tmp/npm-25165-Ee-vSl6D/registry.npmjs.org/electron/-/electron-1.4.5.tgz
+100 http GET https://registry.npmjs.org/electron/-/electron-1.4.5.tgz
+101 http 200 https://registry.npmjs.org/electron/-/electron-1.4.5.tgz
+102 silly lockFile e8e0c975--org-electron-electron-1-4-5-tgz https://registry.npmjs.org/electron/-/electron-1.4.5.tgz
+103 silly lockFile e8e0c975--org-electron-electron-1-4-5-tgz https://registry.npmjs.org/electron/-/electron-1.4.5.tgz
+104 silly lockFile 1db62c69-electron-1-4-5 electron@1.4.5
+105 silly lockFile 1db62c69-electron-1-4-5 electron@1.4.5
+106 silly lockFile 89f56ea2-electron electron@
+107 silly lockFile 89f56ea2-electron electron@
+108 http 200 https://registry.npmjs.org/nedb
+109 silly registry.get cb [ 200,
+109 silly registry.get   { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+109 silly registry.get     etag: '"DP5NGG6LC523HTT4VDJKE9WJX"',
+109 silly registry.get     'content-type': 'application/json',
+109 silly registry.get     'content-encoding': 'gzip',
+109 silly registry.get     'cache-control': 'max-age=300',
+109 silly registry.get     'content-length': '26053',
+109 silly registry.get     'accept-ranges': 'bytes',
+109 silly registry.get     date: 'Wed, 09 Nov 2016 17:39:54 GMT',
+109 silly registry.get     via: '1.1 varnish',
+109 silly registry.get     age: '0',
+109 silly registry.get     connection: 'keep-alive',
+109 silly registry.get     'x-served-by': 'cache-bma7024-BMA',
+109 silly registry.get     'x-cache': 'HIT',
+109 silly registry.get     'x-cache-hits': '1',
+109 silly registry.get     'x-timer': 'S1478713193.977638,VS0,VE767',
+109 silly registry.get     vary: 'Accept-Encoding' } ]
+110 silly addNameRange number 2 { name: 'nedb', range: '*', hasData: true }
+111 silly addNameRange versions [ 'nedb',
+111 silly addNameRange   [ '0.0.1',
+111 silly addNameRange     '0.0.2',
+111 silly addNameRange     '0.0.3',
+111 silly addNameRange     '0.0.4',
+111 silly addNameRange     '0.0.5',
+111 silly addNameRange     '0.0.6',
+111 silly addNameRange     '0.0.7',
+111 silly addNameRange     '0.2.0',
+111 silly addNameRange     '0.3.0',
+111 silly addNameRange     '0.3.2',
+111 silly addNameRange     '0.3.3',
+111 silly addNameRange     '0.3.4',
+111 silly addNameRange     '0.3.5',
+111 silly addNameRange     '0.3.6',
+111 silly addNameRange     '0.4.0',
+111 silly addNameRange     '0.4.1',
+111 silly addNameRange     '0.4.2',
+111 silly addNameRange     '0.5.0',
+111 silly addNameRange     '0.5.1',
+111 silly addNameRange     '0.5.2',
+111 silly addNameRange     '0.5.3',
+111 silly addNameRange     '0.5.4',
+111 silly addNameRange     '0.6.0',
+111 silly addNameRange     '0.6.1',
+111 silly addNameRange     '0.6.2',
+111 silly addNameRange     '0.7.0',
+111 silly addNameRange     '0.7.1',
+111 silly addNameRange     '0.7.2',
+111 silly addNameRange     '0.7.3',
+111 silly addNameRange     '0.7.4',
+111 silly addNameRange     '0.7.5',
+111 silly addNameRange     '0.7.6',
+111 silly addNameRange     '0.7.7',
+111 silly addNameRange     '0.7.8',
+111 silly addNameRange     '0.7.9',
+111 silly addNameRange     '0.7.10',
+111 silly addNameRange     '0.7.11',
+111 silly addNameRange     '0.7.12',
+111 silly addNameRange     '0.7.13',
+111 silly addNameRange     '0.7.14',
+111 silly addNameRange     '0.7.15',
+111 silly addNameRange     '0.8.0',
+111 silly addNameRange     '0.8.1',
+111 silly addNameRange     '0.8.2',
+111 silly addNameRange     '0.8.3',
+111 silly addNameRange     '0.8.4',
+111 silly addNameRange     '0.8.5',
+111 silly addNameRange     '0.8.6',
+111 silly addNameRange     '0.8.7',
+111 silly addNameRange     '0.8.8',
+111 silly addNameRange     '0.8.9',
+111 silly addNameRange     '0.8.10',
+111 silly addNameRange     '0.8.11',
+111 silly addNameRange     '0.8.12',
+111 silly addNameRange     '0.8.13',
+111 silly addNameRange     '0.9.1',
+111 silly addNameRange     '0.9.2',
+111 silly addNameRange     '0.9.3',
+111 silly addNameRange     '0.9.4',
+111 silly addNameRange     '0.10.0',
+111 silly addNameRange     '0.10.1',
+111 silly addNameRange     '0.10.2',
+111 silly addNameRange     '0.10.3',
+111 silly addNameRange     '0.10.4',
+111 silly addNameRange     '0.10.5',
+111 silly addNameRange     '0.10.6',
+111 silly addNameRange     '0.10.7',
+111 silly addNameRange     '0.10.9',
+111 silly addNameRange     '0.10.10',
+111 silly addNameRange     '0.10.11',
+111 silly addNameRange     '0.11.0',
+111 silly addNameRange     '0.11.1',
+111 silly addNameRange     '0.11.2',
+111 silly addNameRange     '1.0.0',
+111 silly addNameRange     '1.0.1',
+111 silly addNameRange     '1.0.2',
+111 silly addNameRange     '1.1.0',
+111 silly addNameRange     '1.1.1',
+111 silly addNameRange     '1.1.2',
+111 silly addNameRange     '1.1.3',
+111 silly addNameRange     '1.1.4',
+111 silly addNameRange     '1.2.0',
+111 silly addNameRange     '1.2.1',
+111 silly addNameRange     '1.3.0',
+111 silly addNameRange     '1.4.0',
+111 silly addNameRange     '1.5.0',
+111 silly addNameRange     '1.5.1',
+111 silly addNameRange     '1.6.0',
+111 silly addNameRange     '1.6.1',
+111 silly addNameRange     '1.6.2',
+111 silly addNameRange     '1.7.1',
+111 silly addNameRange     '1.7.2',
+111 silly addNameRange     '1.7.3',
+111 silly addNameRange     '1.7.4',
+111 silly addNameRange     '1.8.0' ] ]
+112 verbose addNamed [ 'nedb', '1.8.0' ]
+113 verbose addNamed [ '1.8.0', '1.8.0' ]
+114 silly lockFile 70cccdaf-nedb-1-8-0 nedb@1.8.0
+115 verbose lock nedb@1.8.0 /home/aovchinnikov/.npm/70cccdaf-nedb-1-8-0.lock
+116 silly lockFile 011775a9-ry-npmjs-org-nedb-nedb-1-8-0-tgz https://registry.npmjs.org/nedb/-/nedb-1.8.0.tgz
+117 verbose lock https://registry.npmjs.org/nedb/-/nedb-1.8.0.tgz /home/aovchinnikov/.npm/011775a9-ry-npmjs-org-nedb-nedb-1-8-0-tgz.lock
+118 verbose addRemoteTarball [ 'https://registry.npmjs.org/nedb/-/nedb-1.8.0.tgz',
+118 verbose addRemoteTarball   '0e3502cd82c004d5355a43c9e55577bd7bd91d88' ]
+119 info retry fetch attempt 1 at 20:40:40
+120 verbose fetch to= /tmp/npm-25165-Ee-vSl6D/registry.npmjs.org/nedb/-/nedb-1.8.0.tgz
+121 http GET https://registry.npmjs.org/nedb/-/nedb-1.8.0.tgz
+122 http 200 https://registry.npmjs.org/nedb/-/nedb-1.8.0.tgz
+123 silly lockFile 011775a9-ry-npmjs-org-nedb-nedb-1-8-0-tgz https://registry.npmjs.org/nedb/-/nedb-1.8.0.tgz
+124 silly lockFile 011775a9-ry-npmjs-org-nedb-nedb-1-8-0-tgz https://registry.npmjs.org/nedb/-/nedb-1.8.0.tgz
+125 silly lockFile 70cccdaf-nedb-1-8-0 nedb@1.8.0
+126 silly lockFile 70cccdaf-nedb-1-8-0 nedb@1.8.0
+127 silly lockFile c21a1013-nedb nedb@
+128 silly lockFile c21a1013-nedb nedb@
+129 silly lockFile abe5beab--npmjs-org-bower-bower-1-8-0-tgz https://registry.npmjs.org/bower/-/bower-1.8.0.tgz
+130 silly lockFile abe5beab--npmjs-org-bower-bower-1-8-0-tgz https://registry.npmjs.org/bower/-/bower-1.8.0.tgz
+131 silly lockFile 8d20daf9-bower-1-8-0 bower@1.8.0
+132 silly lockFile 8d20daf9-bower-1-8-0 bower@1.8.0
+133 silly lockFile 1240aab1-bower bower@
+134 silly lockFile 1240aab1-bower bower@
+135 error Error: EACCES, mkdir '/home/aovchinnikov/.npm/bower/1.8.0'
+135 error  { [Error: EACCES, mkdir '/home/aovchinnikov/.npm/bower/1.8.0']
+135 error   errno: 3,
+135 error   code: 'EACCES',
+135 error   path: '/home/aovchinnikov/.npm/bower/1.8.0',
+135 error   parent: 'dzgerald' }
+136 error Please try running this command again as root/Administrator.
+137 error System Linux 3.13.0-24-generic
+138 error command "/usr/bin/node" "/usr/bin/npm" "install" "bower" "electron" "nedb" "--save"
+139 error cwd /home/aovchinnikov/work/dzgerald
+140 error node -v v0.10.37
+141 error npm -v 1.4.28
+142 error path /home/aovchinnikov/.npm/bower/1.8.0
+143 error code EACCES
+144 error errno 3
+145 error stack Error: EACCES, mkdir '/home/aovchinnikov/.npm/bower/1.8.0'
+146 verbose exit [ 3, true ]

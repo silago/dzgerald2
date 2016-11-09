@@ -1,0 +1,57 @@
+<html>
+<body>
+    <div id="main">
+        <form>
+            <input type="text" /> <button> find </button>
+            <br/>
+            <button> add </button>
+        </form>
+
+        <div id="search-result"> 
+            <ul> 
+                <li><a href="#">Name Surname</a></li>
+                <li><a click="showUser();" href="#">Jhon Doe</a></li>
+            <ul>
+        </div>      
+
+    </div>
+
+    <div id="new-user-form">
+        <form submit="newUser()">
+            <input type="text"> 
+            <input type="text"> 
+            <input type="text"> 
+            <button> submit </button>
+        </form>
+    </div>
+
+    <div id="new-order-form">
+        <h1> User Namer </h1> 
+        <h1> Discount </h1>
+        <form submit="newUser()">
+            <span> add </span>
+            <div>
+                Item: <input type="text"> 
+                Price: <input type="text"> 
+            </div>
+            <span> total </span> 
+            <span> with discount </span> 
+            <button> submit </button>
+        </form>
+    </div>
+
+    <div id="user-form">
+            <h1> Name </h1>
+            <h1> Surname </h1>
+            <h1> Phone </h1>
+            <h1> Discount </h1>
+            <ul>
+                <li click="addOrder()"> New </li>
+                <li click="showOrder"> Last order 1 </li>
+                <li click="showOrder"> Last order 2 </li>
+                <li click="showOrder"> Last order 3 </li>
+                <li click="showOrders()"> and 10 more.. </li>
+            </ul>
+    </div>  
+</body>
+</html>
