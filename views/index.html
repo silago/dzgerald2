@@ -1,48 +1,101 @@
-<html>
+<html lang="ru">
+    <head>
+    <meta charset=utf-8>
     <script src="../index.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    </head>
 <body>
-    <div id="main">
-        <form>
-            <input type="text" /> <button> find </button>
-            <br/>
-            <button> add </button>
-        </form>
-        <a href='#' onclick="addUser('ivan','03','mail');">add!!!!</a>
-        <a href='#' onclick="searchUser('ivan');">search!!!</a>
-        <div id="search-result"> 
-            <ul> 
-                <li><a href="#">Name Surname</a></li>
-                <li><a click="showUser();" href="#">Jhon Doe</a></li>
-            <ul>
-        </div>      
-
-    </div>
-
-    <div id="new-user-form">
-        <form submit="newUser()">
-            <input type="text"> 
-            <input type="text"> 
-            <input type="text"> 
-            <button> submit </button>
-        </form>
-    </div>
-
-    <div id="new-order-form">
-        <h1> User Namer </h1> 
-        <h1> Discount </h1>
-        <form submit="newUser()">
-            <span> add </span>
-            <div>
-                Item: <input type="text"> 
-                Price: <input type="text"> 
+    <br/>
+    <div id="main" class="container">
+        <form class="" onsubmit="return searchUser(this);">
+            <div class="input-group">
+                <input class="form-control" name="search" type="text" />
+                <span type="submit" class="input-group-addon">
+                    <button class="glyphicon glyphicon-search " type="submit"></button>
+                </span>
             </div>
-            <span> total </span> 
-            <span> with discount </span> 
-            <button> submit </button>
+        </form>
+        <ul id="search-result" class="list-group">
+        </ul>
+        <div>
+            <button onclick="showCreateUserForm();" class="btn btn-primary">
+                Создать нового
+            </button>
+            <!--
+                <a href='#' onclick="addUser('ivan','03','mail');">add!!!!</a>
+                <a href='#' onclick="searchUser('ivan');">search!!!</a>
+            -->
+
+    </div>
+
+    <div id="create-user-form" style="display:none;'">
+        <br />
+        <form class="form-horizontal" onsubmit="return createUser(this);">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    Name
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="uname" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    Phone
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="uphone"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">
+                    Email
+                </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="uemail" />
+                </div>
+            </div>
+            <div class="form-group">
+               <div class="col-sm-offset-2 col-sm-10">
+                 <button type="submit" class="btn btn-default">Create</button>
+               </div>
+             </div>
         </form>
     </div>
 
-    <div id="user-form">
+
+    <div id="show-user" style="display:none;">
+            <h2>User Name</h2>
+            <small class="phone">phone</small>, <small class="email"> email</small>
+            <button class="btn btn-xs edit">Edit </button>
+            <button class="btn btn-xs delete">Delete</button>
+            <br/>
+            <button class="add-bill btn">Add bill</button>
+
+    </div>
+
+    <div id="new-order-form" style="display:none;">
+        <!--
+            <h1 class="name"> User Namer </h1>
+            <h1 class="discount"> Discount </h1>
+        -->
+        <ul>
+            <li>
+                <form>
+                    Item:  <input type="text">
+                    Price: <input type="text">
+                    <button type="submit" class="btn btn-sm">+</button>
+                </form>
+            </li>
+        </ul>
+        <span> total </span>
+        <span> with discount </span>
+        <button> submit </button>
+        </form>
+    </div>
+
+    <!--
+    <div id="user-form" display+>
             <h1> Name </h1>
             <h1> Surname </h1>
             <h1> Phone </h1>
@@ -54,6 +107,7 @@
                 <li click="showOrder"> Last order 3 </li>
                 <li click="showOrders()"> and 10 more.. </li>
             </ul>
-    </div>  
+    </div>
+    -->
 </body>
 </html>
