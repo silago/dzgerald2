@@ -19,7 +19,7 @@ var createUser = function(form) {
         },function(err,newDoc) {
             console.log(newDoc);
             var _id = newDoc._id;
-            showUser(newDoc);
+            showUser(_id);
     });
     return false;
 };
@@ -27,6 +27,7 @@ var createUser = function(form) {
 var showUser =  function(_id) {
     document.getElementById('search-result').style.display='none';
     db.users.find({ _id: _id},((err,docs)=>{
+            console.log(docs);
             var e  = docs[0];
             var form = document.getElementById('show-user');
             form.getElementsByTagName('h2')[0].innerHTML = e.name;
@@ -39,16 +40,64 @@ var showUser =  function(_id) {
         }));
 }
 
-var Order = new Object(
-    init:function() {
-        this.user:null,
-        this;cost:null,
-        this;discount:null,
-        this;items:[];
-    };
+var Order = new Object({
+    add:function(form) {
+        var iname  =  form.iname.value;
+        var icost  =  form.icost.value;
+        this.items.push({
+          name:iname,
+          cost:icost
+        })
+        let i = this.items.length;
+        form.icost.value='';
+        form.iname.value='';
+        this.showList();
+    },
+    showList: function() {
+        var list =  document.getElementById('order-content');
+        list.innerHTML = '';
+        for (i in this.items) {
+          let el = document.createElement('li');
+          el.className = 'list-group-item';
+          el.innerHTML = this.items[i].name + ' ' + this.items[i].cost;
+          let a =  document.createElement('a');
+          a.innerHTML = 'del';
+          a.href="#";
+          a.onclick   = ((e)=>{
+            this.items.splice(i,1);
+            this.showList();
+          });
+          el.appendChild(a);
+          list.appendChild(el);
+        }
+    },
+    submit: function() {
+      for(i in this.items ) {
+        let item = this.items[i];
+        db.users.insert({
+                user_id:this.user_id
+                name:item.name,
+                cost:item.cost
+            },function(err,newDoc) {
+                var _id = newDoc._id;
+                showUser(_id);
+        });
+      }
+      this.init();
+    },
+    init:function(user_id) {
+        if (user_id != undefined ) {
+          this.user_id = user_id;
+        }
+        this.cost = null,
+        this.discount=null,
+        this.items=[];
+    }
+  }
 );
 
 var showBillForm = function(user_id) {
+    Order.init(user_id);
     document.getElementById('new-order-form').style.display='block';
 }
 

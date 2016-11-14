@@ -75,22 +75,16 @@
     </div>
 
     <div id="new-order-form" style="display:none;">
-        <!--
-            <h1 class="name"> User Namer </h1>
-            <h1 class="discount"> Discount </h1>
-        -->
-        <ul>
-            <li>
-                <form>
-                    Item:  <input type="text">
-                    Price: <input type="text">
-                    <button type="submit" class="btn btn-sm">+</button>
-                </form>
-            </li>
+        <form class="form" onsubmit="Order.add(this); return false;">
+            <label>Item:</label> <input name="iname" class="form-control" type="text">
+            <label>Price: </label> <input name="icost" class="form-control" type="text">
+            <button type="submit" class="btn btn-sm glyphicon glyphicon-plus" ></button>
+        </form>
+        <ul class="list-group" id='order-content'>
         </ul>
-        <span> total </span>
-        <span> with discount </span>
-        <button> submit </button>
+        <span id="new-order-form-total"></span>
+        <span id="new-order-form-total-with-discount"></span>
+        <button onclick="Order.submit();"> Submit </button>
         </form>
     </div>
 
