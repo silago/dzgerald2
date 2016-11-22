@@ -4,7 +4,7 @@
     <script src="../index.js"></script>
     <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
     </head>
-<body>
+<body onload="run();">
     <br/>
     <div id="main" class="container">
         <form class="" onsubmit="return searchUser(this);">
@@ -67,9 +67,11 @@
     <div id="show-user" style="display:none;">
             <h2>User Name</h2>
             <small class="phone">phone</small>, <small class="email"> email</small>
-            <button class="btn btn-xs edit">Edit </button>
-            <button class="btn btn-xs delete">Delete</button>
+            <button class="btn btn-xs edit">  Edit </button>
+            <button click="G" class="btn btn-xs delete">Delete</button>
             <br/>
+            <div id="show-user-list">
+            </div>
             <button class="add-bill btn">Add bill</button>
 
     </div>
@@ -89,19 +91,24 @@
     </div>
 
     <!--
-    <div id="user-form" display+>
-            <h1> Name </h1>
-            <h1> Surname </h1>
-            <h1> Phone </h1>
-            <h1> Discount </h1>
-            <ul>
-                <li click="addOrder()"> New </li>
-                <li click="showOrder"> Last order 1 </li>
-                <li click="showOrder"> Last order 2 </li>
-                <li click="showOrder"> Last order 3 </li>
-                <li click="showOrders()"> and 10 more.. </li>
-            </ul>
-    </div>
+        <div id="user-form" display+>
+                <h1> Name </h1>
+                <h1> Surname </h1>
+                <h1> Phone </h1>
+                <h1> Discount </h1>
+                <ul>
+                    <li click="addOrder()"> New </li>
+                    <li click="showOrder"> Last order 1 </li>
+                    <li click="showOrder"> Last order 2 </li>
+                    <li click="showOrder"> Last order 3 </li>
+                    <li click="showOrders()"> and 10 more.. </li>
+                </ul>
+        </div>
     -->
+    ---
+    <div id="holder">
+
+    </div>
+    ---
 </body>
 </html>

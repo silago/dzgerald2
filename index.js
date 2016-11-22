@@ -1,4 +1,6 @@
 var Datastore = require('../node_modules/nedb/lib/datastore');
+var React     = require('../node_modules/react/react.js')
+var ReactDOM   = require('../node_modules/react-dom/index.js')
 
 db = {};
 db.users =  new Datastore('db/users.db');
@@ -24,10 +26,43 @@ var createUser = function(form) {
     return false;
 };
 
+class UserBillList extends React.Component {
+    render() {
+        var user = this.props.user;
+        user.orders = [
+                {
+                    date:'22 04 2015',
+                    total:10,
+                    price:10,
+                    items:[
+                        {
+                            name:'toy',
+                            count:10,
+                            price:10
+                        },
+                        {
+                            name:'toy2',
+                            count:10,
+                            price:10
+                        }
+                    ]
+                }
+        ];
+
+
+        return (
+            React.createElement('ul',{className:'btn'},
+                user.orders.map((item)=>{
+                    return React.createElement('li',{key:item.date},item.date+' '+item.total+' '+item.price)
+                }
+            ))
+        )
+    }
+}
+
 var showUser =  function(_id) {
     document.getElementById('search-result').style.display='none';
     db.users.find({ _id: _id},((err,docs)=>{
-            console.log(docs);
             var e  = docs[0];
             var form = document.getElementById('show-user');
             form.getElementsByTagName('h2')[0].innerHTML = e.name;
@@ -37,6 +72,14 @@ var showUser =  function(_id) {
                 return showBillForm(e.__id);
             });
             form.style.display='block';
+
+              console.log(document.getElementById('show-user-list'));
+            ReactDOM.render(
+              React.createElement(UserBillList,{user:e}),
+              document.getElementById('show-user-list')
+            );
+
+
         }));
 }
 
@@ -75,7 +118,7 @@ var Order = new Object({
       for(i in this.items ) {
         let item = this.items[i];
         db.users.insert({
-                user_id:this.user_id
+                user_id:this.user_id,
                 name:item.name,
                 cost:item.cost
             },function(err,newDoc) {
@@ -127,4 +170,16 @@ var hideCreateUserForm = function() {
 }
 var showCreateUserForm = function() {
         document.getElementById('create-user-form').style.display='block';
+}
+
+
+
+
+var run = function() {
+    return;
+
+    ReactDOM.render(
+      React.createElement(DeleteUserButton,{foo:'bar'}),
+      document.getElementById('holder')
+    );
 }
