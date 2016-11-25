@@ -48,21 +48,26 @@ class UserBillList extends React.Component {
                     ]
                 }
         ];
-
-
         return (
             React.createElement('ul',{className:'btn'},
                 user.orders.map((item)=>{
-                    return React.createElement('li',{key:item.date},item.date+' '+item.total+' '+item.price)
+                    React.createElement('li',{},item.date+' '+item.total+' товаров. '+item.price+'р.')
                 }
             ))
         )
     }
 }
 
+class UserBillList extends React.Component {
+    render() {
+        
+    }
+}
+
 var showUser =  function(_id) {
     document.getElementById('search-result').style.display='none';
     db.users.find({ _id: _id},((err,docs)=>{
+            console.log(docs);
             var e  = docs[0];
             var form = document.getElementById('show-user');
             form.getElementsByTagName('h2')[0].innerHTML = e.name;
@@ -73,13 +78,10 @@ var showUser =  function(_id) {
             });
             form.style.display='block';
 
-              console.log(document.getElementById('show-user-list'));
             ReactDOM.render(
               React.createElement(UserBillList,{user:e}),
               document.getElementById('show-user-list')
             );
-
-
         }));
 }
 
